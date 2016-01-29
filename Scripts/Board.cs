@@ -3,10 +3,10 @@ using System.Collections;
 
 [ExecuteInEditMode]
 public class Board : MonoBehaviour {
-	public int SizeX = 20;
-	public int SizeY = 20;
-	public float TileToUnitRatio = 5;
-	public GameObject TilePrefab;
+	public int sizeX = 20;
+	public int sizeY = 20;
+	public float tileToUnitRatio = 5;
+	public GameObject tilePrefab;
 	// Use this for initialization
 	void Start () {
 		Regenerate();
@@ -24,17 +24,25 @@ public class Board : MonoBehaviour {
 	}
 
 	void CreateBackground() {
-		Vector3 scale = new Vector3 (TileToUnitRatio * SizeX, TileToUnitRatio * SizeY, 1);
+		Vector3 scale = new Vector3 (tileToUnitRatio * sizeX, tileToUnitRatio * sizeY, 1);
 		transform.localScale = scale;
 	}
 
 	void GenerateTiles() {
-		for (int i = 0; i < SizeX; i++) {
-			for (int j = 0; j < SizeY; j++) {
-				GameObject Tile = Instantiate (TilePrefab, new Vector3 (i, j, 0) * (TileToUnitRatio/10f), Quaternion.identity) as GameObject;
+		for (int i = 0; i < sizeX; i++) {
+			for (int j = 0; j < sizeY; j++) {
+				Vector3 startingPoint = new Vector3 (-sizeX / 2f, -sizeY / 2f, 0) * (tileToUnitRatio/10f);
+//				Vector3 startingPoint =Vector3.zero;
+				GameObject tile = Instantiate (
+					tilePrefab, 
+					startingPoint + (new Vector3 (i, j, 0) * (tileToUnitRatio/10f)),
+					Quaternion.identity
+				) as GameObject;
+
 //				GameObject Tile = Instantiate (TilePrefab) as GameObject;
-//				Tile.transform.parent = gameObject.transform;
-//				Tile.transform.transform
+				tile.transform.parent = gameObject.transform;
+//				tile.transform.localScale = Vector3.one;
+//				tile.transform.localPosition = new Vector3 (i, j, 0) * (TileToUnitRatio / 10f);
 			}
 		}
 	}
