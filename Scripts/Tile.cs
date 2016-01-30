@@ -21,11 +21,6 @@ public class Tile : MonoBehaviour {
 	public int[] ruleForEvil;
 	// Number of neighbours for empty tile to become evil
 	public int[] ruleForEmpty;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -73,5 +68,18 @@ public class Tile : MonoBehaviour {
 			}
 		}
 		return evilNeighboursCount;
+	}
+
+	void OnMouseDown() {
+		EvilDispatcher dispatcher = GameObject.FindGameObjectWithTag ("Dispatcher").GetComponent<EvilDispatcher>();
+		if (state == State.empty
+		    && dispatcher.evilParticlesLeft > 0
+		) {
+			state = State.evil;
+			dispatcher.evilParticlesLeft--;
+		} else if (state == State.evil) {
+			state = State.empty;
+			dispatcher.evilParticlesLeft++;
+		}
 	}
 }

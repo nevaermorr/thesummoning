@@ -1,4 +1,5 @@
 ﻿#pragma strict
+import UnityEngine.SceneManagement;
 
 function Awake () {
 	Invoke ("nextLevel", 6);
@@ -6,10 +7,10 @@ function Awake () {
 
 function Update () {
 	if(Input.anyKey){
-		Application.LoadLevel (1);
+		SceneManager.LoadScene ("main");
 	}
 }
 
 function nextLevel() {
-	Application.LoadLevel (1);
+	SceneManager.LoadScene ("main");
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ReleaseEvil : MonoBehaviour {
+public class EvilReleaser : MonoBehaviour {
 
 	// Stop the evil after this many steps.
 	public int maxSteps = 10;
