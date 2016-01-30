@@ -1,18 +1,15 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: c94d5afd18b9eae4e802cf2d5901a684
-timeCreated: 1454160244
-=======
-guid: f41be75347b054d79b1368c747593f0b
-timeCreated: 1454158743
->>>>>>> a01449e6a77762bed214ca0e35931f7c95a345d9
+timeCreated: 1454161885
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: tile_empty_0
+    21300002: tile_empty_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -35,11 +32,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-<<<<<<< HEAD
-    aniso: -1
-=======
     aniso: 16
->>>>>>> a01449e6a77762bed214ca0e35931f7c95a345d9
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -47,11 +40,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> a01449e6a77762bed214ca0e35931f7c95a345d9
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -62,7 +51,29 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: tile_empty_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: tile_empty_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 
