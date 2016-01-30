@@ -53,7 +53,6 @@ public class Board : MonoBehaviour {
 	protected Vector2[] GenerateCultistsPositions(int quantity) {
 		Vector2[] positions = new Vector2[0];
 		Vector2 position;
-		Debug.Log (positions.Length);
 		Vector2 center = new Vector2 (sizeX / 2, sizeY / 2);
 		for (int i = 0; i < quantity; i++) {
 			do {
