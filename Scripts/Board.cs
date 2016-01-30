@@ -39,15 +39,15 @@ public class Board : MonoBehaviour {
 				tile.name = "Tile [" + i + ":" + j + "]";
 				tile.transform.parent = gameObject.transform;
 
-//				if (
-//					(i == 9 && j == 11)
-//					|| (i == 10 && j == 11)
-//					|| (i == 11 && j == 11)
-//					|| (i == 11 && j == 12)
-//					|| (i == 10 && j == 13)
-//				) {
-//					tile.GetComponent<Tile> ().state = Tile.State.evil;
-//				}
+				if (
+					(i == 9 && j == 11)
+					|| (i == 10 && j == 11)
+					|| (i == 11 && j == 11)
+					|| (i == 11 && j == 12)
+					|| (i == 10 && j == 13)
+				) {
+					tile.GetComponent<Tile> ().state = Tile.State.cultist;
+				}
 			}
 		}
 	}

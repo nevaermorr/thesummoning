@@ -17,10 +17,19 @@ public class Tile : MonoBehaviour {
 	public State state;
 	public State nextState;
 
+	protected Animator animator;
+
 	// Number of neighbours for evil tile to remain evil
 	public int[] ruleForEvil;
 	// Number of neighbours for empty tile to become evil
 	public int[] ruleForEmpty;
+	// Number of evil neighbours for cultist tile to become empty
+	public int ruleForCultist;
+
+	void Start() {
+		animator = GetComponent<Animator>();
+		ruleForCultist = 1;
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -29,26 +38,40 @@ public class Tile : MonoBehaviour {
 
 	void AdjustSprite() {
 		if (state == State.empty) {
-			gameObject.GetComponent<SpriteRenderer> ().sprite = spriteEmpty;
+			animator.SetInteger ("State", 0);
+//			gameObject.GetComponent<SpriteRenderer> ().sprite = spriteEmpty;
 		} else if (state == State.evil) {
-			gameObject.GetComponent<SpriteRenderer> ().sprite = spriteEvil;
+			animator.SetInteger ("State", 1);
+//			gameObject.GetComponent<SpriteRenderer> ().sprite = spriteEvil;
 		} else if (state == State.cultist) {
-			gameObject.GetComponent<SpriteRenderer> ().sprite = spriteCultist;
+			animator.SetInteger ("State", 2);
+//			gameObject.GetComponent<SpriteRenderer> ().sprite = spriteCultist;
 		}
 	}
 
 	public void AssertNextState() {
 		int evilNeighboursCount = GetNumberOfEvilNeighbours ();
-		if ((state == State.empty
-				&& ArrayUtility.Contains(ruleForEmpty, evilNeighboursCount)) 
-			|| (state == State.evil
-					&& ArrayUtility.Contains(ruleForEvil, evilNeighboursCount)
-			)
-		) {
-			nextState = State.evil;
-		} else {
+
+		if (state == State.cultist
+			&& evilNeighboursCount >= ruleForCultist) {
 			nextState = State.empty;
+		} else if (state == State.cultist) {
+			nextState = State.cultist;
+		} else {
+			if ((state == State.empty
+				&& ArrayUtility.Contains(ruleForEmpty, evilNeighboursCount)) 
+				|| (state == State.evil
+					&& ArrayUtility.Contains(ruleForEvil, evilNeighboursCount)
+				)
+			) {
+				nextState = State.evil;
+			} else {
+				nextState = State.empty;
+			}
 		}
+
+
+
 	}
 
 	public void ChangeToNextState() {
