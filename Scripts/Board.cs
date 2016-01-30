@@ -33,7 +33,7 @@ public class Board : MonoBehaviour {
 
 				GameObject tile = Instantiate (
 					tilePrefab, 
-					startingPoint + (new Vector3 (i, j, 0)),
+					startingPoint + (new Vector3 (i, j, tilePrefab.transform.position.z)),
 					Quaternion.identity
 				) as GameObject;
 				tile.name = "Tile [" + i + ":" + j + "]";

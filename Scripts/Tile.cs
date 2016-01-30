@@ -85,8 +85,10 @@ public class Tile : MonoBehaviour {
 		// Get all neighbours and count the evil ones.
 		Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, 1);
 		foreach (Collider2D hit in hitColliders) {
-			Tile neighbour = hit.GetComponent<Collider2D>().GetComponent<Tile>();
-			if (neighbour.state == Tile.State.evil) {
+			Collider2D collider = hit.GetComponent<Collider2D> ();
+			Tile neighbour = collider.GetComponent<Tile>();
+			if (neighbour
+				&& neighbour.state == Tile.State.evil) {
 				evilNeighboursCount++;
 			}
 		}
@@ -97,6 +99,12 @@ public class Tile : MonoBehaviour {
 		// Don't do anything if Evil has been already released.
 		EvilReleaser releaser = GameObject.FindGameObjectWithTag ("Releaser").GetComponent<EvilReleaser>();
 		if (releaser.progress) {
+			return;
+		}
+
+		//Check if the clicked place is inside the pentagram
+		Collider2D pentagramCollider = GameObject.FindGameObjectWithTag ("Pentagram").GetComponent<Collider2D> ();
+		if (!pentagramCollider.OverlapPoint (new Vector2 (transform.position.x, transform.position.y))) {
 			return;
 		}
 
