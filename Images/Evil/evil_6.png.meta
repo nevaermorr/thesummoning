@@ -1,0 +1,270 @@
+fileFormatVersion: 2
+guid: 7f2221e1cd0aa4330abc850f55fe0006
+timeCreated: 1454158421
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: evil_6_0
+    21300002: evil_6_1
+    21300004: evil_6_2
+    21300006: evil_6_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: evil_6_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1524
+        width: 508
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 224, y: -40}
+        - {x: 207, y: -16}
+        - {x: 212, y: 15}
+        - {x: 207, y: 64}
+        - {x: 189, y: 89}
+        - {x: 125, y: 133}
+        - {x: 119, y: 146}
+        - {x: 113, y: 156}
+        - {x: 110, y: 157}
+        - {x: 63, y: 157}
+        - {x: 41, y: 151}
+        - {x: 11, y: 101}
+        - {x: -16, y: 110}
+        - {x: -50, y: 105}
+        - {x: -77, y: 84}
+        - {x: -94, y: 62}
+        - {x: -110, y: 85}
+        - {x: -173, y: 102}
+        - {x: -203, y: 81}
+        - {x: -229, y: 42}
+        - {x: -229, y: 5}
+        - {x: -218, y: -49}
+        - {x: -195, y: -69}
+        - {x: -153, y: -70}
+        - {x: -154, y: -95}
+        - {x: -142, y: -127}
+        - {x: -104, y: -149}
+        - {x: -81, y: -143}
+        - {x: -29, y: -125}
+        - {x: 2, y: -82}
+        - {x: 24, y: -108}
+        - {x: 52, y: -135}
+        - {x: 67, y: -139}
+        - {x: 134, y: -155}
+        - {x: 155, y: -155}
+        - {x: 168, y: -154}
+        - {x: 206, y: -135}
+        - {x: 220, y: -101}
+        - {x: 224, y: -75}
+    - name: evil_6_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1016
+        width: 508
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: -112}
+        - {x: 10, y: -140}
+        - {x: 34, y: -149}
+        - {x: 50, y: -150}
+        - {x: 59, y: -150}
+        - {x: 101, y: -130}
+        - {x: 144, y: -147}
+        - {x: 158, y: -147}
+        - {x: 190, y: -134}
+        - {x: 215, y: -104}
+        - {x: 217, y: -77}
+        - {x: 217, y: -23}
+        - {x: 194, y: 25}
+        - {x: 179, y: 33}
+        - {x: 143, y: 52}
+        - {x: 134, y: 72}
+        - {x: 125, y: 119}
+        - {x: 84, y: 153}
+        - {x: 43, y: 153}
+        - {x: 25, y: 142}
+        - {x: -12, y: 137}
+        - {x: -33, y: 148}
+        - {x: -65, y: 147}
+        - {x: -77, y: 145}
+        - {x: -90, y: 140}
+        - {x: -167, y: 122}
+        - {x: -202, y: 109}
+        - {x: -218, y: 94}
+        - {x: -219, y: 86}
+        - {x: -219, y: 24}
+        - {x: -213, y: 16}
+        - {x: -205, y: 2}
+        - {x: -188, y: -12}
+        - {x: -201, y: -48}
+        - {x: -196, y: -125}
+        - {x: -184, y: -146}
+        - {x: -136, y: -150}
+        - {x: -82, y: -150}
+        - {x: -56, y: -138}
+        - {x: -23, y: -117}
+        - {x: -36, y: -100}
+    - name: evil_6_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 508
+        width: 508
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 227, y: -87}
+        - {x: 233, y: -77}
+        - {x: 233, y: -25}
+        - {x: 227, y: 4}
+        - {x: 202, y: 25}
+        - {x: 197, y: 59}
+        - {x: 172, y: 105}
+        - {x: 132, y: 133}
+        - {x: 91, y: 133}
+        - {x: 71, y: 127}
+        - {x: 36, y: 119}
+        - {x: 7, y: 133}
+        - {x: -48, y: 133}
+        - {x: -100, y: 121}
+        - {x: -131, y: 127}
+        - {x: -170, y: 115}
+        - {x: -196, y: 90}
+        - {x: -211, y: 68}
+        - {x: -217, y: 56}
+        - {x: -211, y: 13}
+        - {x: -242, y: -25}
+        - {x: -242, y: -74}
+        - {x: -186, y: -130}
+        - {x: -158, y: -147}
+        - {x: -173, y: -163}
+        - {x: -174, y: -168}
+        - {x: -165, y: -171}
+        - {x: -142, y: -175}
+        - {x: -141, y: -175}
+        - {x: -39, y: -132}
+        - {x: -25, y: -114}
+        - {x: 0, y: -102}
+        - {x: 15, y: -133}
+        - {x: 49, y: -157}
+        - {x: 74, y: -158}
+        - {x: 85, y: -158}
+        - {x: 53, y: -164}
+        - {x: 51, y: -167}
+        - {x: 50, y: -172}
+        - {x: 55, y: -175}
+        - {x: 89, y: -175}
+        - {x: 116, y: -170}
+        - {x: 144, y: -170}
+        - {x: 158, y: -158}
+    - name: evil_6_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 508
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: -112}
+        - {x: 10, y: -140}
+        - {x: 34, y: -149}
+        - {x: 50, y: -150}
+        - {x: 59, y: -150}
+        - {x: 101, y: -130}
+        - {x: 144, y: -147}
+        - {x: 158, y: -147}
+        - {x: 190, y: -134}
+        - {x: 215, y: -104}
+        - {x: 217, y: -77}
+        - {x: 217, y: -23}
+        - {x: 194, y: 25}
+        - {x: 179, y: 33}
+        - {x: 143, y: 52}
+        - {x: 134, y: 72}
+        - {x: 125, y: 119}
+        - {x: 84, y: 153}
+        - {x: 43, y: 153}
+        - {x: 25, y: 142}
+        - {x: -12, y: 137}
+        - {x: -33, y: 148}
+        - {x: -65, y: 147}
+        - {x: -77, y: 145}
+        - {x: -90, y: 140}
+        - {x: -167, y: 122}
+        - {x: -202, y: 109}
+        - {x: -218, y: 94}
+        - {x: -219, y: 86}
+        - {x: -219, y: 24}
+        - {x: -213, y: 16}
+        - {x: -205, y: 2}
+        - {x: -188, y: -12}
+        - {x: -201, y: -48}
+        - {x: -196, y: -125}
+        - {x: -184, y: -146}
+        - {x: -136, y: -150}
+        - {x: -82, y: -150}
+        - {x: -56, y: -138}
+        - {x: -23, y: -117}
+        - {x: -36, y: -100}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
