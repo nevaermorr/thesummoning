@@ -7,10 +7,16 @@ public class ReleaseEvil : MonoBehaviour {
 		GameObject[] tileObjects = GameObject.FindGameObjectsWithTag("Tile");
 
 		foreach (GameObject tileObject in tileObjects) {
-			tileObject.GetComponent<Tile>().AssertNextState ();
+			Tile tile = tileObject.GetComponent<Tile> ();
+			if (tile) {
+				tileObject.GetComponent<Tile> ().AssertNextState ();
+			}
 		}
 		foreach (GameObject tileObject in tileObjects) {
-			tileObject.GetComponent<Tile>().ChangeToNextState ();
+			Tile tile = tileObject.GetComponent<Tile> ();
+			if (tile) {
+				tileObject.GetComponent<Tile> ().ChangeToNextState ();
+			}
 		}
 	}
 }
