@@ -15,6 +15,7 @@ public class Tile : MonoBehaviour {
 	public Sprite spriteEvil;
 	public Sprite spriteCultist;
 	public State state;
+	public int random;
 	public State nextState;
 
 	protected Animator animator;
@@ -29,6 +30,7 @@ public class Tile : MonoBehaviour {
 	void Start() {
 		animator = GetComponent<Animator>();
 		ruleForCultist = 1;
+		random = Random.Range (1, 3);
 	}
 	
 	// Update is called once per frame
@@ -42,6 +44,7 @@ public class Tile : MonoBehaviour {
 //			gameObject.GetComponent<SpriteRenderer> ().sprite = spriteEmpty;
 		} else if (state == State.evil) {
 			animator.SetInteger ("State", 1);
+			animator.SetInteger ("Random", random);
 //			gameObject.GetComponent<SpriteRenderer> ().sprite = spriteEvil;
 		} else if (state == State.cultist) {
 			animator.SetInteger ("State", 2);
