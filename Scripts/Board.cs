@@ -44,7 +44,7 @@ public class Board : MonoBehaviour {
 				tile.name = "Tile [" + i + ":" + j + "]";
 				tile.transform.parent = gameObject.transform;
 
-				if (i > 7 && i < 11 && j > 8 && j < 11) {
+				if (i > 8 && i < 11 && j > 8 && j < 11) {
 					tile.GetComponent<Tile> ().state = Tile.State.evil;
 				}
 			}
