@@ -28,7 +28,7 @@ public class Board : MonoBehaviour {
 	}
 
 	void GenerateTiles() {
-		Vector2[] cultistPositions = GenerateCultistsPositions ();
+		Vector2[] cultistPositions = GenerateCultistsPositions (4);
 
 		for (int i = 0; i < sizeX; i++) {
 			for (int j = 0; j < sizeY; j++) {
@@ -50,11 +50,20 @@ public class Board : MonoBehaviour {
 		}
 	}
 
-	protected Vector2[] GenerateCultistsPositions() {
-		Vector2[] positions = new Vector2[]{
-			new Vector2(5,1),
-			new Vector2(1,9)
-		};
+	protected Vector2[] GenerateCultistsPositions(int quantity) {
+		Vector2[] positions = new Vector2[0];
+		Vector2 position;
+		Debug.Log (positions.Length);
+		Vector2 center = new Vector2 (sizeX / 2, sizeY / 2);
+		for (int i = 0; i < quantity; i++) {
+			do {
+				position = new Vector2 (Random.Range (0, sizeX), Random.Range (0, sizeY));
+			} while (
+				ArrayUtility.Contains (positions, position)
+				|| Vector2.Distance (position, center) < 7
+			);
+			ArrayUtility.Add (ref positions, position);
+		}
 		return positions;
 	}
 
