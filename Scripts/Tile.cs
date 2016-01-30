@@ -30,7 +30,7 @@ public class Tile : MonoBehaviour {
 	void Start() {
 		animator = GetComponent<Animator>();
 		ruleForCultist = 1;
-		random = Random.Range (1, 3);
+		random = Random.Range (1, 7);
 	}
 	
 	// Update is called once per frame
@@ -102,14 +102,12 @@ public class Tile : MonoBehaviour {
 		// Don't do anything if Evil has been already released.
 		EvilReleaser releaser = GameObject.FindGameObjectWithTag ("Releaser").GetComponent<EvilReleaser>();
 		if (releaser.progress) {
-			Debug.Log ("progres!");
 			return;
 		}
 
 		//Check if the clicked place is inside the pentagram
 		Collider2D pentagramCollider = GameObject.FindGameObjectWithTag ("Pentagram").GetComponent<Collider2D> ();
 		if (!pentagramCollider.OverlapPoint (new Vector2 (transform.position.x, transform.position.y))) {
-			Debug.Log ("pentagram!");
 			return;
 		}
 
@@ -117,11 +115,9 @@ public class Tile : MonoBehaviour {
 		if (state == State.empty
 		    && dispatcher.evilParticlesLeft > 0
 		) {
-			Debug.Log ("to evil");
 			state = State.evil;
 			dispatcher.evilParticlesLeft--;
 		} else if (state == State.evil) {
-			Debug.Log ("to empty");
 			state = State.empty;
 			dispatcher.evilParticlesLeft++;
 		}
