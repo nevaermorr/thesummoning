@@ -8,7 +8,7 @@ public class EvilReleaser : MonoBehaviour {
 	// Time between the steps, when playing automatically.
 	public float timeBetweenSteps = 1f;
 	// Is the evil on the move?
-	protected bool progress = false;
+	public bool progress = false;
 
 	void OnMouseDown() {
 		if (!progress) {
