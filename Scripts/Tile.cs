@@ -94,6 +94,12 @@ public class Tile : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
+		// Don't do anything if Evil has been already released.
+		EvilReleaser releaser = GameObject.FindGameObjectWithTag ("Releaser").GetComponent<EvilReleaser>();
+		if (releaser.progress) {
+			return;
+		}
+
 		EvilDispatcher dispatcher = GameObject.FindGameObjectWithTag ("Dispatcher").GetComponent<EvilDispatcher>();
 		if (state == State.empty
 		    && dispatcher.evilParticlesLeft > 0
