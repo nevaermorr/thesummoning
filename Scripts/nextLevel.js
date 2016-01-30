@@ -5,9 +5,9 @@ function Awake () {
 }
 
 function Update () {
-	if(Input.anyKey){
-		Application.LoadLevel (1);
-	}
+//	if(Input.anyKey){
+//		Application.LoadLevel (1);
+//	}
 }
 
 function nextLevel() {
