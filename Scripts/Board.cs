@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
 
 [ExecuteInEditMode]
 public class Board : MonoBehaviour {
@@ -26,6 +28,8 @@ public class Board : MonoBehaviour {
 	}
 
 	void GenerateTiles() {
+		Vector2[] cultistPositions = GenerateCultistsPositions ();
+
 		for (int i = 0; i < sizeX; i++) {
 			for (int j = 0; j < sizeY; j++) {
 				Vector3 startingPoint = new Vector3 ((tilePixelSize/100 - sizeX) / 2f, (tilePixelSize/100 - sizeY) / 2f, 0);
@@ -38,18 +42,20 @@ public class Board : MonoBehaviour {
 				) as GameObject;
 				tile.name = "Tile [" + i + ":" + j + "]";
 				tile.transform.parent = gameObject.transform;
-
-				if (
-					(i == 9 && j == 11)
-					|| (i == 10 && j == 11)
-					|| (i == 11 && j == 11)
-					|| (i == 11 && j == 12)
-					|| (i == 10 && j == 13)
-				) {
+//
+				if (ArrayUtility.Contains(cultistPositions, new Vector2(i, j))) {
 					tile.GetComponent<Tile> ().state = Tile.State.cultist;
 				}
 			}
 		}
+	}
+
+	protected Vector2[] GenerateCultistsPositions() {
+		Vector2[] positions = new Vector2[]{
+			new Vector2(5,1),
+			new Vector2(1,9)
+		};
+		return positions;
 	}
 
 	void DestroyTiles(){
