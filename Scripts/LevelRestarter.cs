@@ -6,6 +6,9 @@ public class LevelRestarter : MonoBehaviour {
 
 	void OnMouseDown() {
 		GameObject board = GameObject.FindGameObjectWithTag ("Board");
+
+//		board.GetComponent<Board> ().cultistsNumber = 
+
 		board.GetComponent<Board> ().Regenerate();
 
 
