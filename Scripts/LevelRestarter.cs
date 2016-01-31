@@ -10,8 +10,5 @@ public class LevelRestarter : MonoBehaviour {
 //		board.GetComponent<Board> ().cultistsNumber = 
 
 		board.GetComponent<Board> ().Regenerate();
-
-
-//		SceneManager.LoadScene (SceneManager.GetActiveScene().name);
 	}
 }

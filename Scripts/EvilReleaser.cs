@@ -10,6 +10,14 @@ public class EvilReleaser : MonoBehaviour {
 	public float timeBetweenSteps = 1f;
 	// Is the evil on the move?
 	public bool progress = false;
+	public enum EndState
+	{
+		none,
+		win,
+		loss
+	};
+
+	public EndState endState;
 
 	void Update() {
 		AdjustButtonAlpha ();
@@ -30,6 +38,7 @@ public class EvilReleaser : MonoBehaviour {
 			MoveOneStep (tiles);
 
 			if (isEndOfGame (tiles)) {
+				ResolveGame ();
 				break;
 			} else if(sequenceTracker.isPrevSequence(tiles)) {
 				break;
@@ -38,6 +47,15 @@ public class EvilReleaser : MonoBehaviour {
 			yield return new WaitForSeconds (timeBetweenSteps);
 		}
 		progress = false;
+	}
+
+	protected void ResolveGame () {
+		EndScreen endScreen = GameObject.FindGameObjectWithTag ("EndScreen").GetComponent<EndScreen> ();
+		if (endState == EndState.win) {
+			endScreen.Win ();
+		} else if (endState == EndState.loss) {
+			endScreen.Loss ();
+		}
 	}
 
 	protected void MoveOneStep(Tile[] tiles) {
@@ -75,10 +93,14 @@ public class EvilReleaser : MonoBehaviour {
 			}
 		}
 
-		if (cultistCount == 0
-			|| evilCount == 0
-		) {
+		if (cultistCount == 0) {
+			endState = EndState.win;
 			return true;
+		} else if (evilCount == 0) {
+			endState = EndState.loss;
+			return true;
+		} else {
+			endState = EndState.none;
 		}
 
 		return false;
