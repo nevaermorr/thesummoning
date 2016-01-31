@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EvilCounter : MonoBehaviour {
-	public Sprite[] counts;
+public class CounterSign : MonoBehaviour {
+	public Sprite x;
+	public Sprite gt;
 
 	// Use this for initialization
 	void Start () {
@@ -13,10 +14,10 @@ public class EvilCounter : MonoBehaviour {
 	void Update () {
 		int evilLeft = GetComponentInParent<EvilDispatcher> ().evilParticlesLeft;
 		SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer> ();
-		if (evilLeft >= counts.Length) {
-			spriteRenderer.sprite = counts [counts.Length - 1];
+		if (evilLeft <= 10) {
+			spriteRenderer.sprite = x;
 		} else {
-			spriteRenderer.sprite = counts [evilLeft];
+			spriteRenderer.sprite = gt;
 		}
 	}
 }
