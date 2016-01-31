@@ -1,0 +1,192 @@
+fileFormatVersion: 2
+guid: 7e9232ad7bafa403c990edd2d0f8757e
+timeCreated: 1454220168
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: qmark_0
+    21300002: qmark_1
+    21300004: qmark_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: qmark_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1153.3333
+        width: 580
+        height: 576.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1, y: -118.16675}
+        - {x: -27, y: -132.16675}
+        - {x: -35, y: -154.16675}
+        - {x: -35, y: -190.16675}
+        - {x: -33, y: -195.16675}
+        - {x: 0, y: -195.16675}
+        - {x: 21, y: -190.16675}
+        - {x: 26, y: -165.16675}
+        - {x: 26, y: -124.16675}
+        - {x: 17, y: -118.16675}
+      - - {x: 77, y: 92.83325}
+        - {x: 77, y: 116.83325}
+        - {x: 71, y: 169.83325}
+        - {x: 60, y: 182.83325}
+        - {x: 21, y: 201.83325}
+        - {x: -11, y: 201.83325}
+        - {x: -16, y: 200.83325}
+        - {x: -77, y: 158.83325}
+        - {x: -77, y: 121.83325}
+        - {x: -72, y: 105.83325}
+        - {x: -62, y: 115.83325}
+        - {x: -62, y: 117.83325}
+        - {x: -62, y: 113.83325}
+        - {x: -61, y: 107.83325}
+        - {x: -60, y: 104.83325}
+        - {x: -53, y: 106.83325}
+        - {x: -48, y: 123.83325}
+        - {x: -48, y: 125.83325}
+        - {x: -47, y: 123.83325}
+        - {x: -45, y: 121.83325}
+        - {x: -42, y: 122.83325}
+        - {x: -60, y: -56.166748}
+        - {x: -25, y: -81.16675}
+        - {x: 25, y: -81.16675}
+        - {x: 28, y: -76.16675}
+        - {x: 37, y: -45.166748}
+        - {x: 31, y: -41.166748}
+        - {x: 70, y: 70.83325}
+      - - {x: -54, y: 107.83325}
+        - {x: -52, y: 105.83325}
+        - {x: -49, y: 106.83325}
+        - {x: -49, y: 109.83325}
+        - {x: -51, y: 111.83325}
+        - {x: -54, y: 110.83325}
+    - name: qmark_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 577.3333
+        width: 580
+        height: 576.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: -122.16669}
+        - {x: -35, y: -154.16669}
+        - {x: -35, y: -199.16669}
+        - {x: 13, y: -199.16669}
+        - {x: 26, y: -172.16669}
+        - {x: 26, y: -122.16669}
+      - - {x: 85, y: 145.83331}
+        - {x: 60, y: 197.83331}
+        - {x: -44, y: 197.83331}
+        - {x: -76, y: 135.83331}
+        - {x: -76, y: 109.83331}
+        - {x: -62, y: 103.83331}
+        - {x: -35, y: 117.83331}
+        - {x: -42, y: -4.166687}
+        - {x: -33, y: -71.16669}
+        - {x: -25, y: -107.16669}
+        - {x: -7, y: -107.16669}
+        - {x: 21, y: -82.16669}
+        - {x: 49, y: -87.16669}
+        - {x: 85, y: 51.833313}
+    - name: qmark_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.333313
+        width: 580
+        height: 576.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: -133.16669}
+        - {x: -31, y: -145.16669}
+        - {x: -31, y: -189.16669}
+        - {x: -25, y: -199.16669}
+        - {x: -19, y: -201.16669}
+        - {x: -6, y: -201.16669}
+        - {x: 24, y: -183.16669}
+        - {x: 24, y: -139.16669}
+        - {x: 15, y: -133.16669}
+      - - {x: 50, y: 192.83331}
+        - {x: -26, y: 192.83331}
+        - {x: -77, y: 158.83331}
+        - {x: -77, y: 102.83331}
+        - {x: -69, y: 86.83331}
+        - {x: -17, y: 111.83331}
+        - {x: -48, y: -44.166687}
+        - {x: -35, y: -56.166687}
+        - {x: -29, y: -55.166687}
+        - {x: -25, y: -53.166687}
+        - {x: -28, y: -111.16669}
+        - {x: 29, y: -111.16669}
+        - {x: 85, y: 24.833313}
+        - {x: 85, y: 162.83331}
+        - {x: 83, y: 165.83331}
+      - - {x: -54, y: 99.83331}
+        - {x: -52, y: 97.83331}
+        - {x: -49, y: 98.83331}
+        - {x: -49, y: 101.83331}
+        - {x: -51, y: 103.83331}
+        - {x: -54, y: 102.83331}
+      - - {x: -45, y: 113.83331}
+        - {x: -42, y: 114.83331}
+        - {x: -42, y: 117.83331}
+        - {x: -45, y: 118.83331}
+        - {x: -47, y: 116.83331}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
