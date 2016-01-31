@@ -49,7 +49,6 @@ public class EvilReleaser : MonoBehaviour {
 	protected void AdjustButtonAlpha() {
 		SpriteRenderer renderer = GetComponent<SpriteRenderer> ();
 		Color color = renderer.color;
-		Debug.Log (color.a);
 		if (progress) {
 			color.a = .2f;
 		} else {
