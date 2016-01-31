@@ -7,6 +7,7 @@ using UnityEditor;
 public class Board : MonoBehaviour {
 	public int sizeX = 20;
 	public int sizeY = 20;
+	public int cultistsNumber = 4;
 	public float tileToUnitRatio = 5;
 	public float tilePixelSize = 100;
 	public GameObject tilePrefab;
@@ -28,7 +29,7 @@ public class Board : MonoBehaviour {
 	}
 
 	void GenerateTiles() {
-		Vector2[] cultistPositions = GenerateCultistsPositions (4);
+		Vector2[] cultistPositions = GenerateCultistsPositions (cultistsNumber);
 
 		for (int i = 0; i < sizeX; i++) {
 			for (int j = 0; j < sizeY; j++) {
