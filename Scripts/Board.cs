@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 
 [ExecuteInEditMode]
 public class Board : MonoBehaviour {
@@ -30,7 +29,8 @@ public class Board : MonoBehaviour {
 	}
 
 	void GenerateTiles() {
-		Vector2[] cultistPositions = GenerateCultistsPositions (cultistsNumber);
+//		Vector2[] cultistPositions = GenerateCultistsPositions (cultistsNumber);
+		List<Vector2> cultistPositions = GenerateCultistsPositions (cultistsNumber);
 
 		for (int i = 0; i < sizeX; i++) {
 			for (int j = 0; j < sizeY; j++) {
@@ -45,25 +45,25 @@ public class Board : MonoBehaviour {
 				tile.name = "Tile [" + i + ":" + j + "]";
 				tile.transform.parent = gameObject.transform;
 //
-				if (ArrayUtility.Contains(cultistPositions, new Vector2(i, j))) {
+				if (cultistPositions.Contains(new Vector2(i, j))) {
 					tile.GetComponent<Tile> ().state = Tile.State.cultist;
 				}
 			}
 		}
 	}
 
-	protected Vector2[] GenerateCultistsPositions(int quantity) {
-		Vector2[] positions = new Vector2[0];
+	protected List<Vector2> GenerateCultistsPositions(int quantity) {
+		List<Vector2> positions = new List<Vector2>();
 		Vector2 position;
 		Vector2 center = new Vector2 (sizeX / 2, sizeY / 2);
 		for (int i = 0; i < quantity; i++) {
 			do {
 				position = new Vector2 (Random.Range (0, sizeX), Random.Range (0, sizeY));
 			} while (
-				ArrayUtility.Contains (positions, position)
+				positions.Contains(position)
 				|| Vector2.Distance (position, center) < 7
 			);
-			ArrayUtility.Add (ref positions, position);
+			positions.Add (position);
 		}
 		return positions;
 	}
