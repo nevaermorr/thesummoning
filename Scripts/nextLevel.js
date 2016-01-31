@@ -12,5 +12,5 @@ function Update () {
 }
 
 function NextLevel() {
-	SceneManager.LoadScene("main");
+	SceneManager.LoadScene("Game");
 }
