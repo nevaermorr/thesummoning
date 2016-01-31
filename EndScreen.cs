@@ -23,7 +23,7 @@ public class EndScreen : MonoBehaviour {
 
 	void OnMouseDown() {
 		Vector3 position = transform.position;
-		position.z = position.z * -1.0f;
+		position.z = 50.0f;
 		transform.position = position;
 		GameObject menu = GameObject.FindGameObjectWithTag ("Menu");
 		Vector3 menuPosition = menu.transform.position;
