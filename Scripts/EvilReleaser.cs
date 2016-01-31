@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 using System.Collections;
+using System.Collections.Generic;
 
 public class EvilReleaser : MonoBehaviour {
 
@@ -31,7 +32,7 @@ public class EvilReleaser : MonoBehaviour {
 
 	protected IEnumerator BreedSequence () {
 		progress = true;
-		Tile[] tiles = GetTiles ();
+		List<Tile> tiles = GetTiles ();
 		SequenceTracker sequenceTracker = new SequenceTracker ();
 
 		for (int i = 0; i < maxSteps; i++) {
@@ -58,7 +59,7 @@ public class EvilReleaser : MonoBehaviour {
 		}
 	}
 
-	protected void MoveOneStep(Tile[] tiles) {
+	protected void MoveOneStep(List<Tile> tiles) {
 
 		foreach (Tile tile in tiles) {
 			tile.AssertNextState ();
@@ -68,20 +69,21 @@ public class EvilReleaser : MonoBehaviour {
 		}
 	}
 
-	protected Tile[] GetTiles() {
+	protected List<Tile> GetTiles() {
 		GameObject[] tileObjects = GameObject.FindGameObjectsWithTag("Tile");
 
-		Tile[] tiles = new Tile[0];
+		List<Tile> tiles = new List<Tile>();
 		foreach (GameObject tileObject in tileObjects) {
 			Tile tile = tileObject.GetComponent<Tile> ();
 			if (tile) {
-				ArrayUtility.Add (ref tiles, tileObject.GetComponent<Tile> ());
+				tiles.Add (tileObject.GetComponent<Tile> ());
+//				ArrayUtility.Add (ref tiles, tileObject.GetComponent<Tile> ());
 			}
 		}
 		return tiles;
 	}
 
-	protected bool isEndOfGame(Tile[] tiles) {
+	protected bool isEndOfGame(List<Tile> tiles) {
 		int cultistCount = 0;
 		int evilCount = 0;
 
