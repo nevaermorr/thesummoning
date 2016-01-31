@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 public class LevelRestarter : MonoBehaviour {
 
 	void OnMouseDown() {
-		SceneManager.LoadScene (SceneManager.GetActiveScene().name);
+		GameObject board = GameObject.FindGameObjectWithTag ("Board");
+		board.GetComponent<Board> ().Regenerate();
+
+
+//		SceneManager.LoadScene (SceneManager.GetActiveScene().name);
 	}
 }

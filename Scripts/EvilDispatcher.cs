@@ -11,8 +11,7 @@ public class EvilDispatcher : MonoBehaviour {
 		evilParticlesLeft = maxEvilParticles;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	public void Reset() {
+		evilParticlesLeft = maxEvilParticles;
 	}
 }

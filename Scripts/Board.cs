@@ -20,6 +20,7 @@ public class Board : MonoBehaviour {
 		CreateBackground ();
 		DestroyTiles ();
 		GenerateTiles ();
+		ResetEvil ();
 	}
 
 	void CreateBackground() {
@@ -72,5 +73,10 @@ public class Board : MonoBehaviour {
 		foreach (GameObject Tile in Tiles) {
 			DestroyImmediate (Tile);
 		}
+	}
+
+	void ResetEvil() {
+		EvilDispatcher dispatcher = GameObject.FindGameObjectWithTag ("Dispatcher").GetComponent<EvilDispatcher>();
+		dispatcher.Reset ();
 	}
 }
