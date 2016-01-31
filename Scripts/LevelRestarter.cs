@@ -7,8 +7,5 @@ public class LevelRestarter : MonoBehaviour {
 	void OnMouseDown() {
 		GameObject board = GameObject.FindGameObjectWithTag ("Board");
 		board.GetComponent<Board> ().Regenerate();
-
-
-//		SceneManager.LoadScene (SceneManager.GetActiveScene().name);
 	}
 }

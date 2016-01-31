@@ -50,6 +50,20 @@ public class Tile : MonoBehaviour {
 			animator.SetInteger ("State", 2);
 //			gameObject.GetComponent<SpriteRenderer> ().sprite = spriteCultist;
 		}
+		RotateCultists ();
+	}
+
+	void RotateCultists() {
+		if (state == State.cultist) {
+			RotateTowardsCentre ();
+		} else {
+			transform.rotation = Quaternion.identity;
+		}
+	}
+
+	void RotateTowardsCentre() {
+		float angle = Mathf.Atan2 (0, 0) * Mathf.Rad2Deg;
+		transform.rotation = Quaternion.LookRotation(Vector3.forward, transform.position);
 	}
 
 	public void AssertNextState() {
