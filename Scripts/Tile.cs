@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using System.Collections;
+using System.Collections.Generic;
 
 [ExecuteInEditMode]
 public class Tile : MonoBehaviour {
@@ -21,9 +21,9 @@ public class Tile : MonoBehaviour {
 	protected Animator animator;
 
 	// Number of neighbours for evil tile to remain evil
-	public int[] ruleForEvil;
+	public List<int> ruleForEvil;
 	// Number of neighbours for empty tile to become evil
-	public int[] ruleForEmpty;
+	public List<int> ruleForEmpty;
 	// Number of evil neighbours for cultist tile to become empty
 	public int ruleForCultist;
 
@@ -75,9 +75,9 @@ public class Tile : MonoBehaviour {
 			nextState = State.cultist;
 		} else {
 			if ((state == State.empty
-				&& ArrayUtility.Contains(ruleForEmpty, evilNeighboursCount)) 
+				&& ruleForEmpty.Contains(evilNeighboursCount)) 
 				|| (state == State.evil
-					&& ArrayUtility.Contains(ruleForEvil, evilNeighboursCount)
+					&& ruleForEvil.Contains(evilNeighboursCount)
 				)
 			) {
 				nextState = State.evil;
