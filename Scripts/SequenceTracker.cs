@@ -8,7 +8,7 @@ public class SequenceTracker {
 //	protected string[] sequences;
 	protected string prevSequence;
 
-	protected string SequenceToString(Tile[] tiles) {
+	protected string SequenceToString(List<Tile> tiles) {
 		SortedDictionary<string, string> tileDictionary = new SortedDictionary<string, string>();
 
 		foreach (Tile tile in tiles) {
@@ -26,7 +26,7 @@ public class SequenceTracker {
 		return sequence;
 	}
 
-	public bool isPrevSequence(Tile[] tiles) {
+	public bool isPrevSequence(List<Tile> tiles) {
 		string sequence = SequenceToString (tiles);
 		bool answer = (sequence == prevSequence);
 		prevSequence = sequence;
