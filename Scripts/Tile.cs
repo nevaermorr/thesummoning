@@ -62,7 +62,6 @@ public class Tile : MonoBehaviour {
 	}
 
 	void RotateTowardsCentre() {
-		float angle = Mathf.Atan2 (0, 0) * Mathf.Rad2Deg;
 		transform.rotation = Quaternion.LookRotation(Vector3.forward, transform.position);
 	}
 
