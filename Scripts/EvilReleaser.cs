@@ -10,6 +10,10 @@ public class EvilReleaser : MonoBehaviour {
 	// Is the evil on the move?
 	public bool progress = false;
 
+	void Update() {
+		AdjustButtonAlpha ();
+	}
+
 	void OnMouseDown() {
 		if (!progress) {
 			StartCoroutine (StepSequence());
@@ -40,5 +44,17 @@ public class EvilReleaser : MonoBehaviour {
 				tileObject.GetComponent<Tile> ().ChangeToNextState ();
 			}
 		}
+	}
+
+	protected void AdjustButtonAlpha() {
+		SpriteRenderer renderer = GetComponent<SpriteRenderer> ();
+		Color color = renderer.color;
+		Debug.Log (color.a);
+		if (progress) {
+			color.a = .2f;
+		} else {
+			color.a = 1f;
+		}
+		renderer.color = color;
 	}
 }
